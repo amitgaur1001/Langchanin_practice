@@ -9,7 +9,7 @@ from langchain_core.messages import AIMessage,HumanMessage,SystemMessage
 
 load_dotenv()
 
-print(os.getenv("GROQ_API_KEY")[:])
+# print(os.getenv("GROQ_API_KEY")[:])
 
 
 
