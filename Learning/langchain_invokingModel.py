@@ -27,7 +27,11 @@ for chunk in model.stream("what is the weather in delhi?"):
 full_message=sum(chunks[1:],chunks[0])
 print("\n\nFull message:",full_message.text)
 
+## the Model is bind with the tool and then invoked with the tool. the tool is not called directly.
 model_tools=model.bind_tools([get_weather])
 response_with_tools=model_tools.invoke("what is the weather in delhi?")
 print(response_with_tools.tool_calls)
+
+
+
 
