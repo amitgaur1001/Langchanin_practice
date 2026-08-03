@@ -69,3 +69,12 @@ result=union_agent.invoke({
 })
 
 result['structured_response']
+
+
+class MovieShows(BaseModel):
+  name : str
+  timing:str
+
+response = model.with_structured_output(MovieShows).invoke("Is Interstellar showing tonight at 7pm at the Downtown cinema ?")
+
+print(response)
